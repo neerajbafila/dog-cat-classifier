@@ -1,1 +1,10 @@
-mkdocs-material
+# mkdocs-material
+#tensorflow
+tensorflow-gpu
+# pandas
+# numpy
+matplotlib
+pillow
+notebook
+mlflow
+pyyaml

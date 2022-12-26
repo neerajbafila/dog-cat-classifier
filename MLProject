@@ -1,0 +1,14 @@
+name: DOG-CAT-Classifier
+
+conda_env: conda.yaml
+
+entry_points:
+    main:
+        command: "python src/main.py"
+    
+    get_data:
+        parameters:
+            config: {type: str, default: "config/config.yaml"}
+        command: "python src/stage_01_get_data.py --config={config}"
+         
+

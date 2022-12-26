@@ -1,0 +1,12 @@
+Logger:
+      log_file_name: logs
+      log_location: Logs
+DataPath: Data\PetImages\
+BadDataPath: 
+      root_folder: Data\BadData\
+      BadDataFile: BadImg.txt
+      cat: cat
+      dog: dog
+
+
+
