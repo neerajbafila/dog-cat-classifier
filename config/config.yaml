@@ -7,6 +7,10 @@ BadDataPath:
       BadDataFile: BadImg.txt
       cat: cat
       dog: dog
+Model:
+      Model_dir: Models
+      baseModel_name: baseModel.h5
+      TrainedModel_name: trained_model.h5
 
 
 
