@@ -8,7 +8,8 @@ def main():
     with mlflow.start_run() as run:
         logs.write_log(f'{__name__} Main started', 'info')
         mlflow.run(".", "get_data", env_manager='local')
-        
+        mlflow.run(".", "base_model_creation", env_manager='local')
+        mlflow.run(".", "model_training", env_manager='local')
     
 
 if __name__ == '__main__':

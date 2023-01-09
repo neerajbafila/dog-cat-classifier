@@ -132,3 +132,7 @@ dmypy.json
 /mlruns
 /Logs
 reSearchEnv/*
+Models/baseModel.h5
+Models/ckpd.h5
+Models/trained_model.h5
+

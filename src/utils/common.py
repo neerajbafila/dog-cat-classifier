@@ -5,6 +5,7 @@ import os
 
 
 def read_config(config_file='config/config.yaml') -> dict:
+    config_file = os.path.join("", config_file)
     with open (config_file, 'r') as yaml_file:
         content = yaml.safe_load(yaml_file)
     # print(content)

@@ -1,3 +1,21 @@
 IMG_SHAPE: [180,180,3]
 kernel_initializer: "glorot_uniform"
 final_activation: "softmax"
+callbacks:
+  restore_best_weights: True
+  patience: 4
+optimizer:
+  lr: 0.001
+  loss: sparse_categorical_crossentropy
+metrics: ['accuracy']
+data_train_val:
+  validation_split: 0.2
+  batch_size: 32
+  image_size: [180,180]
+  seed: 42
+  prefetch_buffer_batch: 32 
+epoch: 1
+use_multiprocessing: True
+
+
+  

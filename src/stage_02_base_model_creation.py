@@ -29,6 +29,12 @@ class BaseModelCreation:
         model_summary = log_model_summary(classifier)
         # print(classifier.summary())
         logs.write_log(model_summary, 'info')
+        # compile model with optimizer
+        classifier.compile(optimizer=tf.keras.optimizers.Adam(learning_rate=self.params['optimizer']['lr']), 
+                                loss=self.params['optimizer']['loss'],
+                                metrics=self.params['metrics'])
+        logs.write_log(f"Model compiled with Adam optimizer lr={self.params['optimizer']['lr']}, loss={self.params['optimizer']['loss']} "
+                                f"metrics={self.params['metrics']}")
         # save base model
         model_dir = self.config['Model']['Model_dir']
         # create_directories(model_dir)
@@ -40,8 +46,9 @@ class BaseModelCreation:
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--config", "--c", default="config/config.yaml")
-    parser.add_argument("--param", "--p", default="config/param.yaml")
+    parser.add_argument("--config", "--c", default="config\config.yaml")
+    # parser.add_argument("--config", "--c", default="config\config.yaml")
+    parser.add_argument("--param", "--p", default="config\param.yaml")
     parsed_args = parser.parse_args()
     logs = logger(parsed_args.config)
     print(f'***********{STAGE} started*********')

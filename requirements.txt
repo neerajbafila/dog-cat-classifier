@@ -1,8 +1,8 @@
 # mkdocs-material
 #tensorflow
 tensorflow-gpu
-# pandas
-# numpy
+pandas
+numpy
 matplotlib
 pillow
 notebook

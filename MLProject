@@ -10,5 +10,14 @@ entry_points:
         parameters:
             config: {type: str, default: "config/config.yaml"}
         command: "python src/stage_01_get_data.py --config={config}"
-         
+    base_model_creation:
+        parameters:
+            config: {type: str, default: 'config/config.yaml'}
+            param: {type: str, default: "config\\param.yaml"}
+        command: "python src/stage_02_base_model_creation.py --config={config} --param={param}"
+    model_training:
+        parameters:
+            config: {type: str, default: 'config/config.yaml'}
+            param: {type: str, default: 'config\\param.yaml'}
+        command: "python src/stage_03_model_training.py --config={config} --param={param}"
 
